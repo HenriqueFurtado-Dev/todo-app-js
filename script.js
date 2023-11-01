@@ -40,6 +40,15 @@ listContainer.addEventListener('click', function(e){
     }
 }, false);
 
+function valueDefault() {
+    let itemDefault = document.createElement("li");
+    itemDefault.innerHTML = 'Eu sou uma task de teste'
+    listContainer.appendChild(itemDefault)
+    let span = document.createElement("span")
+    span.innerHTML = "\u00d7"
+    itemDefault.appendChild(span)
+    
+}
 
 // Salvando no Local Storage
 function saveData() {
@@ -51,4 +60,4 @@ function showTask() {
     console.log(localStorage.getItem("data"))
 }
 
-showTask()
+showTask();
